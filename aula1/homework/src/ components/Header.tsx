@@ -2,10 +2,10 @@
 import { View, Text, StyleSheet } from "react-native"
 import AntDesign from '@expo/vector-icons/AntDesign';
 
-const Footer = () => {
+const Header = () => {
     return (
         <View>
-            <Text style={styles.text}><AntDesign name="heart" size={24} color="grey" /></Text>
+            <Text style={styles.text}>@SteinMarcelo</Text>
         </View>
     )
 }
@@ -13,8 +13,8 @@ const Footer = () => {
 const styles = StyleSheet.create({
     text: {
         color: "#f1f1f1",
-        fontSize: 22,
+        fontSize: 11,
     }
 })
 
-export default Footer;
+export default Header;

@@ -18,7 +18,7 @@ const Post = ({ title }: PostProps) => {
     >
       <Text style={styles.title}>{title}</Text>
       <Image
-        style={{ width: 50, height: 50 }}
+        style={{ width: '100%', height:350 }}
         source={{ uri: "https://github.com/SteinMarcelo.png" }}
       />
       <Footer />

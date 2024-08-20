@@ -8,9 +8,7 @@ const Home = () => {
   //npx expo install react-native-safe-area-context
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.title}>Titulo</Text>
-      <Post title="Texto 1" />
-      <Footer />
+      <Post title="SteinMarcelo" />
     </SafeAreaView>
   );
 };
