@@ -1,5 +1,6 @@
 import { Text, View, Image, StyleSheet } from "react-native";
 import Footer from "./Footer";
+import Header from "./Header";
 
 interface PostProps {
   title: string;
@@ -10,25 +11,27 @@ const Post = ({ title }: PostProps) => {
     <View
       style={{
         marginVertical: 15,
-        alignItems: "center",
         borderColor: "#ffff",
         width: "90%",
         paddingVertical: 8,
       }}
     >
-      <Text style={styles.title}>{title}</Text>
+      <Header></Header>
       <Image
-        style={{ width: '100%', height:350 }}
+        style={{ width: "100%", height: 350 }}
         source={{ uri: "https://github.com/SteinMarcelo.png" }}
       />
-      <Footer />
+      <View style={{ flexDirection: 'row',padding:15, alignItems: 'center'}}>
+        <Footer />
+      </View>
+      
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   title: {
-    fontSize: 24,
+    fontSize: 16,
     color: "#f1f1f1f1",
   },
 });

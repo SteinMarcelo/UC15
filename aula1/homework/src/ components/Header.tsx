@@ -1,19 +1,25 @@
 
-import { View, Text, StyleSheet } from "react-native"
+import { View, Text,Image, StyleSheet } from "react-native"
 import AntDesign from '@expo/vector-icons/AntDesign';
 
 const Header = () => {
     return (
-        <View>
-            <Text style={styles.text}>@SteinMarcelo</Text>
+        <View style={{ flexDirection: 'row',padding:15, alignItems: 'center'}}>
+            
+            <Image
+        style={{ width: 40, height: 40, borderRadius: 20 }}
+        source={{ uri: "https://github.com/SteinMarcelo.png" }}
+      />
+      <Text style={styles.text}>@SteinMarcelo</Text>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     text: {
-        color: "#f1f1f1",
-        fontSize: 11,
+        color: "black",
+        fontSize: 16,
+        margin: 'right',
     }
 })
 
