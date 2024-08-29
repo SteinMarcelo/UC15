@@ -1,14 +1,21 @@
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import AntDesign from "@expo/vector-icons/AntDesign";
-import { Title } from "./styles";
+import { View, TouchableOpacity } from "react-native";
+import { AntDesign } from "@expo/vector-icons"; // Certifique-se de usar a importação correta
+import { SocialNetworks } from "./styles";
 
 const Footer = () => {
   return (
-    <View>
-      <Title>@Marcelo_Steinhaus</Title>
-      <TouchableOpacity onPress={() => alert("Me siga para mais dicas")}>
-        <AntDesign name="rightcircle" size={24} color="#25252" />
-      </TouchableOpacity>
+    <View >
+      <SocialNetworks>
+          <TouchableOpacity onPress={() => alert("Me siga para mais dicas")} style={{ flexDirection: "row", padding: 15, alignItems: "center" }}>
+            <AntDesign name="facebook-square" size={50} color="#252525" />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => alert("Me siga para mais dicas")} style={{ flexDirection: "row", padding: 15, alignItems: "center" }}>  
+            <AntDesign name="facebook-square" size={50} color="#252525" />
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => alert("Me siga para mais dicas")} style={{ flexDirection: "row", padding: 15, alignItems: "center" }}>  
+            <AntDesign name="facebook-square" size={50} color="#252525" />
+          </TouchableOpacity>
+      </SocialNetworks>
     </View>
   );
 };
