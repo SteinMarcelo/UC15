@@ -1,16 +1,15 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, TextInput } from "react-native";
 
-const User = () => {
-  const [text, onChangeText] = React.useState("Useless Text");
+interface UserProps {
+  user: string;
+  setUser: React.Dispatch<React.SetStateAction<string>>;
+}
 
+const User = ({ user, setUser }: UserProps) => {
   return (
     <SafeAreaView>
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeText}
-        value={text}
-      />
+      <TextInput style={styles.input} onChangeText={setUser} value={user} />
     </SafeAreaView>
   );
 };
@@ -21,9 +20,9 @@ const styles = StyleSheet.create({
     margin: 12,
     borderWidth: 2,
     padding: 5,
-    width:250,
-    borderRadius:10,
-    backgroundColor:"white"
+    width: 250,
+    borderRadius: 10,
+    backgroundColor: "white",
   },
 });
 

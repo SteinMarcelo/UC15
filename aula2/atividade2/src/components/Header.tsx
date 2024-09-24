@@ -1,12 +1,12 @@
 import { View, Image,Text } from "react-native"
-import { Content, ProfilePicture } from "./styles";
+import { Content, ProfilePicture,HeaderPhoto } from "./styles";
 
 const Header= () => {
   return (
-    <View>
-        <Content>Teste</Content>
-        <ProfilePicture source={{ uri: 'https://github.com/SteinMarcelo.png' }}></ProfilePicture>
-    </View>
+  
+    <HeaderPhoto>
+        <ProfilePicture source={{ uri: 'https://github.com/SteinMarcelo.png' }}></ProfilePicture>   
+    </HeaderPhoto>
   )
 }
 export default Header;

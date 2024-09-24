@@ -1,15 +1,19 @@
-import React from 'react';
-import {SafeAreaView, StyleSheet, TextInput} from 'react-native';
+import React, { SetStateAction } from "react";
+import { SafeAreaView, StyleSheet, TextInput } from "react-native";
 
-const Password = () => {
-  const [number, onChangeNumber] = React.useState('');
+interface PasswordProps {
+  password: string;
+  setPassword: React.Dispatch<SetStateAction<string>>;
+}
 
+const Password = ({ password, setPassword }: PasswordProps) => {
   return (
     <SafeAreaView>
-      <TextInput secureTextEntry={true}
+      <TextInput
+        secureTextEntry={true}
         style={styles.input}
-        onChangeText={onChangeNumber}
-        value={number}
+        onChangeText={setPassword}
+        value={password}
       />
     </SafeAreaView>
   );
@@ -21,9 +25,9 @@ const styles = StyleSheet.create({
     margin: 12,
     borderWidth: 2,
     padding: 5,
-    width:250,
-    borderRadius:10,
-    backgroundColor:"white"
+    width: 250,
+    borderRadius: 10,
+    backgroundColor: "white",
   },
 });
 
